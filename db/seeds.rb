@@ -7,4 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-user.create
+
+# User.create(username:"user1",password:"1")
+# User.create(username:"user2", password:"2")
+
+# Trip.create( name:"Goats trip", startDate: "1222321", endDate: "e12",latitude: "123",longitude:"123", user_id:1, friend_id:2)
