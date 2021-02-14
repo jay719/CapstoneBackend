@@ -7,7 +7,7 @@ class TripsController < ApplicationController
     end
 
     def create
-        @trip1 = Trip.create(
+        Trip.create(
             name: params[:name],
             startDate: params[:startDate],
             endDate: params[:endDate],
@@ -15,7 +15,7 @@ class TripsController < ApplicationController
             longitude: params[:longitude],
             user_id: params[:user_id],
             friend_id: params[:friend_id]
-        ),
+        )
         Trip.create(
             name: params[:name],
             startDate: params[:startDate],
@@ -25,7 +25,7 @@ class TripsController < ApplicationController
             user_id: params[:friend_id],
             friend_id: params[:user_id]
         )
-        render json: @trip1, include: [:user,:friend]
-        # redirect_to trips_path
+        # render json: @trip1, include: [:user,:friend]
+        redirect_to trips_path
     end
 end
