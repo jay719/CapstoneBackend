@@ -25,7 +25,6 @@ class TripsController < ApplicationController
             user_id: params[:friend_id],
             friend_id: params[:user_id]
         )
-        # render json: @trip1, include: [:user,:friend]
         redirect_to trips_path
     end
 end
