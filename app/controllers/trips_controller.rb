@@ -15,7 +15,7 @@ class TripsController < ApplicationController
             longitude: params[:longitude],
             user_id: params[:user_id],
             friend_id: params[:friend_id]
-        )
+        ),
         Trip.create(
             name: params[:name],
             startDate: params[:startDate],
