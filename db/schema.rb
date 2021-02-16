@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2021_02_09_173808) do
     t.string "endDate"
     t.string "latitude"
     t.string "longitude"
+    t.string "description"
+    t.string "events", default: [], array: true
+    t.string "updates", default: [], array: true
     t.bigint "user_id", null: false
     t.bigint "friend_id", null: false
     t.datetime "created_at", precision: 6, null: false

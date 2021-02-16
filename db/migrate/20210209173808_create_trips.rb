@@ -6,6 +6,9 @@ class CreateTrips < ActiveRecord::Migration[6.0]
       t.string :endDate
       t.string :latitude
       t.string :longitude
+      t.string :description
+      t.string :events, array: true, default: []
+      t.string :updates, array: true, default: []
       t.references :user, null: false, foreign_key: true
       t.references :friend, null: false
 

@@ -14,7 +14,9 @@ class TripsController < ApplicationController
             latitude: params[:latitude],
             longitude: params[:longitude],
             user_id: params[:user_id],
-            friend_id: params[:friend_id]
+            friend_id: params[:friend_id],
+            events: params[:events],
+            updates: params[:updates]
         ),
         Trip.create(
             name: params[:name],
@@ -23,7 +25,9 @@ class TripsController < ApplicationController
             latitude: params[:latitude],
             longitude: params[:longitude],
             user_id: params[:friend_id],
-            friend_id: params[:user_id]
+            friend_id: params[:user_id],
+            events: params[:events],
+            updates: params[:updates]
         )
         render json: @tripOne
         # redirect_to trips_path
