@@ -7,7 +7,7 @@ class TripsController < ApplicationController
     end
     def show 
         @trip = Trip.find(params[:id])
-        render json: @trip
+        render json: @trip, include: [:user,:friend]
     end
 
     def create
@@ -20,6 +20,7 @@ class TripsController < ApplicationController
             user_id: params[:user_id],
             friend_id: params[:friend_id],
             events: params[:events],
+            restaurants: params[:restaurants],
             updates: params[:updates],
             description: params[:description]
         )
@@ -33,7 +34,8 @@ class TripsController < ApplicationController
             friend_id: params[:user_id],
             events: params[:events],
             updates: params[:updates],
-            description: params[:description]
+            description: params[:description],
+            restaurants: params[:restaurants]
         )
         # render json: @tripOne
         redirect_to trips_path
