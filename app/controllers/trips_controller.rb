@@ -42,9 +42,9 @@ class TripsController < ApplicationController
         # render json: @tripOne
         redirect_to trips_path
     end
-    def delete
+    def destroy
         @trip = Trip.find(params[:id])
-        @trip.delete
+        @trip.destroy
         render json: {message: "Trip: #{@trip.id} has been deleted"}
     end
 end
