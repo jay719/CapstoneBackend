@@ -11,7 +11,7 @@ class TripsController < ApplicationController
     end
 
     def create
-       Trip.create(
+        Trip.create(
             name: params[:name],
             startDate: params[:startDate],
             endDate: params[:endDate],

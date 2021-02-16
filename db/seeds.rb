@@ -11,4 +11,4 @@
 # User.create(username:"user1",password:"1")
 # User.create(username:"user2", password:"2")
 
-Trip.create( name:"Goats trip", startDate: "1222321", endDate: "e12",latitude: "123",longitude:"123", user_id:4, friend_id:5)
+# Trip.create( name:"Goats trip", startDate: "1222321", endDate: "e12",latitude: "123",longitude:"123", user_id:4, friend_id:5)
