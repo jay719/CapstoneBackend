@@ -7,6 +7,7 @@ class CreateTrips < ActiveRecord::Migration[6.0]
       t.string :latitude
       t.string :longitude
       t.string :description
+      t.string :icon
       t.string :restaurants, array: true, default: []
       t.string :updates, array: true, default: []
       t.string :events, array: true, default: []

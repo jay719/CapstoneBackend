@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_02_09_173808) do
     t.string "latitude"
     t.string "longitude"
     t.string "description"
+    t.string "icon"
     t.string "restaurants", default: [], array: true
     t.string "updates", default: [], array: true
     t.string "events", default: [], array: true
