@@ -12,7 +12,7 @@ class AuthenticationController < ApplicationController
                 }
                 secret = ENV['SECRET_KEY_BASE']
                 token = JWT.encode(payload, secret)
-                render json: {token: token}, status: :created
+                render json: {token: token, user:@user}, status: :created
             end
 
         end
