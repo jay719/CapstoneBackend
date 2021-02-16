@@ -5,6 +5,10 @@ class TripsController < ApplicationController
 
         render json: @trips, include: [:user,:friend]
     end
+    def show 
+        @trip = Trip.find(params[:id])
+        render json: @trip
+    end
 
     def create
        Trip.create(
@@ -33,5 +37,10 @@ class TripsController < ApplicationController
         )
         # render json: @tripOne
         redirect_to trips_path
+    end
+    def delete
+        @trip = Trip.find(params[:id])
+        @trip.delete
+        render json: {message: "Trip: #{@trip.id} has been deleted"}
     end
 end
