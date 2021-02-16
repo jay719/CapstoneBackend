@@ -16,7 +16,8 @@ class TripsController < ApplicationController
             user_id: params[:user_id],
             friend_id: params[:friend_id],
             events: params[:events],
-            updates: params[:updates]
+            updates: params[:updates],
+            description: params[:description]
         )
         Trip.create(
             name: params[:name],
@@ -27,7 +28,8 @@ class TripsController < ApplicationController
             user_id: params[:friend_id],
             friend_id: params[:user_id],
             events: params[:events],
-            updates: params[:updates]
+            updates: params[:updates],
+            description: params[:description]
         )
         # render json: @tripOne
         redirect_to trips_path
