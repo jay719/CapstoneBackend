@@ -23,7 +23,7 @@ class TripsController < ApplicationController
             restaurants: params[:restaurants],
             updates: params[:updates],
             description: params[:description],
-            icon: params[:icons]
+            icon: params[:icon]
         )
         Trip.create(
             name: params[:name],
@@ -37,7 +37,7 @@ class TripsController < ApplicationController
             updates: params[:updates],
             description: params[:description],
             restaurants: params[:restaurants],
-            icon: params[:icons]
+            icon: params[:icon]
         )
         # render json: @tripOne
         redirect_to trips_path
